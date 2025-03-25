@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lv2_riverpod/layout/default_layout.dart';
-import 'package:flutter_lv2_riverpod/riverpod/state_provider_screen.dart';
+import 'package:flutter_lv2_riverpod/riverpod/state_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class StateProviderScreen extends ConsumerWidget {
@@ -8,7 +8,7 @@ class StateProviderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final provider = ref.watch(numberProvider);
+    final state = ref.watch(numberProvider);
 
     return DefaultLayout(
       title: 'StateProviderScreen',
@@ -18,7 +18,7 @@ class StateProviderScreen extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              provider.toString(),
+              state.toString(),
             ),
             ElevatedButton(
               onPressed: () {
