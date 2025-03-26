@@ -8,7 +8,7 @@ class FutureProviderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(multiplesFutureProvider);
+    final state = ref.watch(multipleFutureProvider);
 
     return DefaultLayout(
       title: 'FutureProviderScreen',
