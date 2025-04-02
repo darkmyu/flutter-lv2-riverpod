@@ -3,6 +3,7 @@ import 'package:flutter_lv2_riverpod/layout/default_layout.dart';
 import 'package:flutter_lv2_riverpod/screen/auto_dispose_modifier_screen.dart';
 import 'package:flutter_lv2_riverpod/screen/family_modifier_screen.dart';
 import 'package:flutter_lv2_riverpod/screen/future_provider_screen.dart';
+import 'package:flutter_lv2_riverpod/screen/listen_provider_screen.dart';
 import 'package:flutter_lv2_riverpod/screen/state_notifier_provider_screen.dart';
 import 'package:flutter_lv2_riverpod/screen/state_provider_screen.dart';
 import 'package:flutter_lv2_riverpod/screen/stream_provider_screen.dart';
@@ -75,6 +76,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: const Text('AutoDisposeModifierScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const ListenProviderScreen(),
+                ),
+              );
+            },
+            child: const Text('ListenProviderScreen'),
           ),
         ],
       ),
