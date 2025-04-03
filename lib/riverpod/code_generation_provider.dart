@@ -22,3 +22,12 @@ Future<int> gStateFuture2(GStateFuture2Ref ref) async {
 
   return 10;
 }
+
+@riverpod
+int gStateMultiply(
+  GStateMultiplyRef ref, {
+  required int number1,
+  required int number2,
+}) {
+  return number1 * number2;
+}
